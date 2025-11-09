@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt'
 import jwt from "jsonwebtoken";
-const UserSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     email: { 
         type: String, 
         required: true, 
@@ -67,4 +67,4 @@ userSchema.methods.generateRefreshToken = async function (){
 )
 };
 
-module.exports = mongoose.model('User', UserSchema);
+export default mongoose.model('User', userSchema);
