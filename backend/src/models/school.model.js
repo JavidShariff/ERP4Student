@@ -4,11 +4,6 @@ const schoolSchema = new mongoose.Schema({
   name: { type: String, required: true },
   address: String,
   contact: String,
-  schoolId: { 
-        type: mongoose.Schema.Types.ObjectId, 
-        ref: 'School', 
-        required: true 
-    },
     schoolCode: { 
         type: String, 
         required: true, 
