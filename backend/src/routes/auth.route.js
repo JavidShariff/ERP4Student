@@ -2,7 +2,8 @@ import {
     createSchool,
     loginUser,
     logoutUser,
-    getCurrentUser  
+    getCurrentUser,
+    refreshAccessToken
 } from "../controllers/auth.controller.js";
 import {asyncHandler} from "../utils/asyncHandler.js";
 import {Router} from "express";
@@ -13,5 +14,6 @@ router.post("/create-school",asyncHandler(createSchool));
 router.post("/login",asyncHandler(loginUser));
 router.post("/logout",asyncHandler(logoutUser));
 router.get("/current-user",asyncHandler(getCurrentUser));
+router.post("/refresh-token",asyncHandler(refreshAccessToken));
 
 export default router;
